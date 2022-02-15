@@ -27,7 +27,7 @@ const CartProvider = ({ children }) => {
     setCart(() => products);
   };
 
-  const handleSubtractFromCard = (id, name) => {
+  const handleSubtractFromCart = (id, name) => {
     let products = [...cart];
     const productIndex = products.findIndex((product) => product.id === id);
 
@@ -71,7 +71,7 @@ const CartProvider = ({ children }) => {
     cart,
     setCart,
     handleAddToCart,
-    handleSubtractFromCard,
+    handleSubtractFromCart,
     handleRemoveFromCart,
     clearCart,
   };

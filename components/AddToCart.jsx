@@ -1,7 +1,7 @@
 import { useCart } from '../context/cart';
 
 export const AddToCart = ({ id, price, name }) => {
-  const { cart, handleAddToCart, handleSubractFromCart } = useCart();
+  const { cart, handleAddToCart, handleSubtractFromCart } = useCart();
 
   console.log(handleAddToCart);
 
@@ -16,7 +16,7 @@ export const AddToCart = ({ id, price, name }) => {
           <button
             className='w-12 px-4 py-2 bg-gray-500 rounded-lg disabled:bg-gray-800 text-slate-50 disabled:text-slate-400'
             disabled={price.toLocaleString() === 'NaN'}
-            onClick={() => handleSubractFromCart(id, name)}
+            onClick={() => handleSubtractFromCart(id, name)}
           >
             -
           </button>

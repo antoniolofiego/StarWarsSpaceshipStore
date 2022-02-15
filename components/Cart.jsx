@@ -6,7 +6,7 @@ export const Cart = () => {
   const {
     cart,
     handleAddToCart,
-    handleSubractFromCart,
+    handleSubtractFromCart,
     handleRemoveFromCart,
     clearCart,
   } = useCart();
@@ -71,7 +71,7 @@ export const Cart = () => {
                       className='w-12 px-4 py-2 bg-gray-500 rounded-lg disabled:bg-gray-800 text-slate-50 disabled:text-slate-400'
                       disabled={product.price.toLocaleString() === 'NaN'}
                       onClick={() =>
-                        handleSubractFromCart(product.id, product.name)
+                        handleSubtractFromCart(product.id, product.name)
                       }
                     >
                       -
