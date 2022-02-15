@@ -7,6 +7,7 @@ const Context = createContext({
   handleAddToCart: (id, price, name) => {},
   handleSubtractFromCart: (id, name) => {},
   handleRemoveFromCart: (id, name) => {},
+  clearCart: () => {},
 });
 
 const CartProvider = ({ children }) => {
@@ -61,12 +62,18 @@ const CartProvider = ({ children }) => {
     return;
   };
 
+  const clearCart = () => {
+    setCart(() => []);
+    toast.error(`Removed all ships from cart`);
+  };
+
   const exposed = {
     cart,
     setCart,
     handleAddToCart,
     handleSubtractFromCard,
     handleRemoveFromCart,
+    clearCart,
   };
 
   return <Context.Provider value={exposed}>{children}</Context.Provider>;

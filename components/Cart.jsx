@@ -3,8 +3,13 @@ import Image from 'next/image';
 import { useCart } from '../context/cart';
 
 export const Cart = () => {
-  const { cart, handleAddToCart, handleSubractFromCart, handleRemoveFromCart } =
-    useCart();
+  const {
+    cart,
+    handleAddToCart,
+    handleSubractFromCart,
+    handleRemoveFromCart,
+    clearCart,
+  } = useCart();
 
   const total = () => {
     let total = 0;
@@ -102,6 +107,12 @@ export const Cart = () => {
                 {total().toLocaleString()}
               </span>
             </div>
+            <button
+              className='col-span-1 px-4 py-2 bg-gray-500 rounded-lg text-slate-50'
+              onClick={clearCart}
+            >
+              Clear cart
+            </button>
           </div>
         </>
       ) : null}
