@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { useCart } from '../context/cart';
 
 export const Cart = () => {

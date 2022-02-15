@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
-import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
 import { Cart, AddToCart } from '../components';
