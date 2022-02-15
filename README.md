@@ -21,6 +21,10 @@ A small project to practice a React interview-like assignment, inspired by @tech
 - Button to clear the whole cart
 - DARK THEME!
 
+## What's next?
+
+- Integration and E2E tests with Jest/RTL and Cypress.
+
 ## Setup
 
 1. Clone the repo git clone https://github.com/antoniolofiego/StarWarsSpaceshipStore
