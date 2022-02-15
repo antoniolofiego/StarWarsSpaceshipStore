@@ -43,14 +43,14 @@ export const Cart = () => {
                     x
                   </button>
                   <p className='col-span-2'>{product.name}</p>
-                  <div className='flex col-span-2 space-x-2'>
+                  <div className='flex items-center col-span-2 space-x-2'>
                     <span>{product.quantity} x</span>
-                    <span className='flex items-center font-star'>
+                    <span className='font-star'>
                       $ {product.price.toLocaleString()}
                     </span>
                   </div>
                   <div className='col-span-2'>
-                    <span className='flex items-center font-star'>
+                    <span className='font-star'>
                       $ {(product.price * product.quantity).toLocaleString()}
                     </span>
                   </div>
@@ -85,9 +85,7 @@ export const Cart = () => {
               {totalQuantity()} spaceships
             </div>
             <div className='col-span-2'>
-              <span className='flex items-center font-star'>
-                $ {total().toLocaleString()}
-              </span>
+              <span className='font-star'>$ {total().toLocaleString()}</span>
             </div>
             <button
               className='col-span-1 px-4 py-2 bg-gray-500 rounded-lg text-slate-50'
