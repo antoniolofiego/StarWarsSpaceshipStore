@@ -2,9 +2,10 @@
 
 A small project to practice a React interview-like assignment, inspired by @techieeliot's suggestion as he shared the same assignment. Initially it started just as an experiment for `react-hot-toast` but it expanded to encompass the assignment itself.
 
-## Notes
+## Notes/Tech Stack
 
-- This took me around 2 hours
+- This took me around 2 hours for the main logic and another couple of hours for adjustments and small clean-ups
+- Next.js
 - Tailwind CSS for styling
 - `react-hot-toast` for notifications
 - `swr` as the data fetching library
