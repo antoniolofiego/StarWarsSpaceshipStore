@@ -5,6 +5,7 @@ const Context = createContext({
   cart: [],
   setCart: () => {},
   handleAddToCart: (id, price, name) => {},
+  handleSubtractFromCart: (id, name) => {},
   handleRemoveFromCart: (id, name) => {},
 });
 
@@ -14,18 +15,21 @@ const CartProvider = ({ children }) => {
   const handleAddToCart = (id, price, name) => {
     const products = [...cart];
     const productIndex = products.findIndex((product) => product.id === id);
+
     if (productIndex < 0) {
       products.push({ id: id, quantity: 1, price: price, name: name });
     } else {
       products[productIndex].quantity++;
     }
+
     toast.success(`Added ${name} to cart`);
     setCart(() => products);
   };
 
-  const handleRemoveFromCart = (id, name) => {
-    const products = [...cart];
+  const handleSubtractFromCard = (id, name) => {
+    let products = [...cart];
     const productIndex = products.findIndex((product) => product.id === id);
+
     if (productIndex < 0) {
       setCart(() => products);
     } else {
@@ -43,10 +47,25 @@ const CartProvider = ({ children }) => {
     setCart(() => products);
   };
 
+  const handleRemoveFromCart = (id, name) => {
+    let products = [...cart];
+    const productIndex = products.findIndex((product) => product.id === id);
+
+    if (productIndex < 0) {
+      setCart(() => products);
+    }
+
+    products = products.filter((product) => product.id !== id);
+    toast.error(`Removed all ${name} ships from cart`);
+    setCart(() => products);
+    return;
+  };
+
   const exposed = {
     cart,
     setCart,
     handleAddToCart,
+    handleSubtractFromCard,
     handleRemoveFromCart,
   };
 

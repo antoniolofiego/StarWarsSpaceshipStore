@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { useCart } from '../context/cart';
 
 export const Cart = () => {
-  const { cart, handleAddToCart, handleRemoveFromCart } = useCart();
+  const { cart, handleAddToCart, handleSubractFromCart, handleRemoveFromCart } =
+    useCart();
 
   const total = () => {
     let total = 0;
@@ -28,7 +29,15 @@ export const Cart = () => {
                   key={product.id}
                   className='grid items-center grid-cols-8 justify-items-center'
                 >
-                  <p className='col-span-3'>{product.name}</p>
+                  <button
+                    className='col-span-1 px-4 py-2 bg-gray-500 rounded-lg text-slate-50'
+                    onClick={() =>
+                      handleRemoveFromCart(product.id, product.name)
+                    }
+                  >
+                    x
+                  </button>
+                  <p className='col-span-2'>{product.name}</p>
                   <div className='flex col-span-2 space-x-2'>
                     <span>{product.quantity} x</span>
                     <span className='flex items-center'>
@@ -57,7 +66,7 @@ export const Cart = () => {
                       className='w-12 px-4 py-2 bg-gray-500 rounded-lg disabled:bg-gray-800 text-slate-50 disabled:text-slate-400'
                       disabled={product.price.toLocaleString() === 'NaN'}
                       onClick={() =>
-                        handleRemoveFromCart(product.id, product.name)
+                        handleSubractFromCart(product.id, product.name)
                       }
                     >
                       -
@@ -77,7 +86,8 @@ export const Cart = () => {
             })}
           </div>
           <div className='grid items-center grid-cols-8 justify-items-center'>
-            <p className='col-span-3'>TOTAL</p>
+            <p className='col-span-1'></p>
+            <p className='col-span-2'>TOTAL</p>
             <div className='flex col-span-2 space-x-2'>
               {totalQuantity()} spaceships
             </div>
