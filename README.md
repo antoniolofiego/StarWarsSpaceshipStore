@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Wars Spaceship Store
 
-## Getting Started
+A small project to practice a React interview-like assignment, inspired by @techieeliot's suggestion as he shared the same assignment. Initially it started just as an experiment for `react-hot-toast` but it expanded to encompass the
 
-First, run the development server:
+## Notes
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- This took me around 2 hours
+- Tailwind CSS for styling
+- `react-hot-toast` for notifications
+- `swr` as the data fetching library
+- React Context for state management
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Display all starships in the Star Wars API as cards, purchaseable or not based on price availability.
+- Pagination with cached results and jump to page.
+- Shopping cart handling with React Context
+- Modify shopping cart seamlessly from the available ships or from the shopping cart itself
+- Display shopping cart total
+- Button to remove all ships of one type from cart
+- Button to clear the whole cart
+- DARK THEME!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Setup
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Clone the repo git clone https://github.com/antoniolofiego/StarWarsSpaceshipStore
 
-## Learn More
+2. yarn install or npm install to install npm packages
 
-To learn more about Next.js, take a look at the following resources:
+3. Run app by using yarn start or npm run start, then open http://localhost:3000 to view it in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thanks for taking the time to look through this project 👍
