@@ -57,7 +57,7 @@ const CartProvider = ({ children }) => {
     }
 
     products = products.filter((product) => product.id !== id);
-    toast.error(`Removed all ${name} ships from cart`);
+    toast.error(`Removed all ${name}s from cart`);
     setCart(() => products);
     return;
   };
