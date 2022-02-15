@@ -1,6 +1,6 @@
 # Star Wars Spaceship Store
 
-A small project to practice a React interview-like assignment, inspired by @techieeliot's suggestion as he shared the same assignment. Initially it started just as an experiment for `react-hot-toast` but it expanded to encompass the
+A small project to practice a React interview-like assignment, inspired by @techieeliot's suggestion as he shared the same assignment. Initially it started just as an experiment for `react-hot-toast` but it expanded to encompass the assignment itself.
 
 ## Notes
 
@@ -29,4 +29,5 @@ A small project to practice a React interview-like assignment, inspired by @tech
 
 3. Run app by using yarn start or npm run start, then open http://localhost:3000 to view it in the browser.
 
+A live version of the app is available at https://star-wars-spaceship-store.vercel.app/.
 Thanks for taking the time to look through this project 👍
