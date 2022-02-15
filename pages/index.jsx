@@ -50,7 +50,7 @@ const Home = () => {
       <ThemeSwitcher />
       <main className='flex items-center justify-center'>
         <div className='space-y-8'>
-          <h1 className='py-4 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br dark:from-white from-black to-yellow-600'>
+          <h1 className='py-4 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br dark:from-white from-black to-yellow-600 font-star'>
             Star Wars Starship Store
           </h1>
           {isLoading && <p>Loading</p>}
@@ -74,14 +74,8 @@ const Home = () => {
                         {isNaN(price) ? (
                           'Unavailable'
                         ) : (
-                          <span className='flex items-center'>
-                            <Image
-                              src='/images/credit.png'
-                              alt='Star Wars Credit'
-                              height='16px'
-                              width='12px'
-                            />
-                            {price.toLocaleString()}
+                          <span className='flex items-center font-star'>
+                            $ {price.toLocaleString()}
                           </span>
                         )}
                       </p>

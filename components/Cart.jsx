@@ -45,25 +45,13 @@ export const Cart = () => {
                   <p className='col-span-2'>{product.name}</p>
                   <div className='flex col-span-2 space-x-2'>
                     <span>{product.quantity} x</span>
-                    <span className='flex items-center'>
-                      <Image
-                        src='/images/credit.png'
-                        alt='Star Wars Credit'
-                        height='16px'
-                        width='12px'
-                      />
-                      {product.price.toLocaleString()}
+                    <span className='flex items-center font-star'>
+                      $ {product.price.toLocaleString()}
                     </span>
                   </div>
                   <div className='col-span-2'>
-                    <span className='flex items-center'>
-                      <Image
-                        src='/images/credit.png'
-                        alt='Star Wars Credit'
-                        height='16px'
-                        width='12px'
-                      />
-                      {(product.price * product.quantity).toLocaleString()}
+                    <span className='flex items-center font-star'>
+                      $ {(product.price * product.quantity).toLocaleString()}
                     </span>
                   </div>
                   <div className='flex justify-between space-x-4'>
@@ -97,14 +85,8 @@ export const Cart = () => {
               {totalQuantity()} spaceships
             </div>
             <div className='col-span-2'>
-              <span className='flex items-center'>
-                <Image
-                  src='/images/credit.png'
-                  alt='Star Wars Credit'
-                  height='16px'
-                  width='12px'
-                />
-                {total().toLocaleString()}
+              <span className='flex items-center font-star'>
+                $ {total().toLocaleString()}
               </span>
             </div>
             <button
