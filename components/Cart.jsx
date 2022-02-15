@@ -27,7 +27,7 @@ export const Cart = () => {
     <div className='flex flex-col justify-center w-full space-y-2'>
       {cart.length > 0 ? (
         <>
-          <div className='pb-2 space-y-2 border-b-2 border-black'>
+          <div className='pb-2 space-y-2 border-b-2 border-black dark:border-slate-50'>
             {cart.map((product) => {
               return (
                 <div
