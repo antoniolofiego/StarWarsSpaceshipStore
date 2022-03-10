@@ -33,6 +33,9 @@ export const Cart = () => {
                   className='grid items-center grid-cols-8 justify-items-center'
                 >
                   <button
+                    name={`remove-all-${product.name
+                      .toLowerCase()
+                      .replace(' ', '-')}`}
                     className='col-span-1 px-4 py-2 bg-gray-500 rounded-lg text-slate-50'
                     onClick={() =>
                       handleRemoveFromCart(product.id, product.name)

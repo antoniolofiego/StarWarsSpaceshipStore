@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import { useTheme } from 'next-themes';
 
-import { Cart, AddToCart } from '../components';
+import { Cart, Starship } from '../components';
 
 import { useWithToast } from '../hooks';
 
@@ -27,6 +27,7 @@ const Home = () => {
       <>
         {resolvedTheme === 'dark' ? (
           <button
+            name='light-theme'
             className='fixed top-0 right-0 p-4 text-5xl'
             onClick={() => setTheme('light')}
           >
@@ -34,6 +35,7 @@ const Home = () => {
           </button>
         ) : (
           <button
+            name='dark-theme'
             className='fixed top-0 right-0 p-4 text-5xl'
             onClick={() => setTheme('dark')}
           >
@@ -56,32 +58,7 @@ const Home = () => {
           <div className='grid grid-cols-2 gap-4'>
             {data &&
               data.results.map((starship) => {
-                const id =
-                  starship.url.split('/')[starship.url.split('/').length - 2];
-                const price = parseInt(starship.cost_in_credits);
-                return (
-                  <div
-                    key={starship.name}
-                    className='flex items-center justify-between'
-                  >
-                    <div className='p-2 mx-2 space-y-2'>
-                      <h2 className='text-xl'>{starship.name}</h2>
-                      <h3 className='text-lg'>{starship.model}</h3>
-                    </div>
-                    <div className='flex flex-col items-end justify-end'>
-                      <p>
-                        {isNaN(price) ? (
-                          'Unavailable'
-                        ) : (
-                          <span className='flex items-center font-star'>
-                            $ {price.toLocaleString()}
-                          </span>
-                        )}
-                      </p>
-                      <AddToCart id={id} price={price} name={starship.name} />
-                    </div>
-                  </div>
-                );
+                return <Starship key={starship.id} starship={starship} />;
               })}
           </div>
           <div className='flex items-center justify-center space-x-3'>
