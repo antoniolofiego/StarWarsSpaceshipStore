@@ -27,6 +27,7 @@ const Home = () => {
       <>
         {resolvedTheme === 'dark' ? (
           <button
+            name='light-theme'
             className='fixed top-0 right-0 p-4 text-5xl'
             onClick={() => setTheme('light')}
           >
@@ -34,6 +35,7 @@ const Home = () => {
           </button>
         ) : (
           <button
+            name='dark-theme'
             className='fixed top-0 right-0 p-4 text-5xl'
             onClick={() => setTheme('dark')}
           >
