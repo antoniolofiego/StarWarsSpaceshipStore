@@ -10,6 +10,7 @@ A small project to practice a React interview-like assignment, inspired by @tech
 - `react-hot-toast` for notifications
 - `swr` as the data fetching library
 - React Context for state management
+- Jest/RTL and Cypress for testing
 
 ## Features
 
@@ -21,10 +22,8 @@ A small project to practice a React interview-like assignment, inspired by @tech
 - Button to remove all ships of one type from cart
 - Button to clear the whole cart
 - DARK THEME!
+- E2E testing with Cypress on most functionalities
 
-## What's next?
-
-- Integration and E2E tests with Jest/RTL and Cypress.
 
 ## Setup
 
@@ -33,6 +32,8 @@ A small project to practice a React interview-like assignment, inspired by @tech
 2. yarn install or npm install to install npm packages
 
 3. Run app by using yarn start or npm run start, then open http://localhost:3000 to view it in the browser.
+
+4. Run the tests with `npm run cypress`
 
 A live version of the app is available at https://star-wars-spaceship-store.vercel.app/.
 Thanks for taking the time to look through this project 👍
