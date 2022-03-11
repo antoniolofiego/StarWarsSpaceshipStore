@@ -73,7 +73,6 @@ const Home = () => {
             <button
               disabled={pageIndex === MIN_PAGES}
               className='disabled:text-gray-400'
-              a
               onClick={() => setPageIndex((pageIndex) => pageIndex - 1)}
             >
               Previous
